@@ -107,8 +107,11 @@ button { font-family: inherit; }
 .question-banner{
   box-sizing: border-box;
   margin: 0 0 12px 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   text-align:center;
-  padding:14px 20px 14px 180px; /* leave space for controls */
+  padding:14px 20px; /* symmetric padding, controls are absolutely positioned */
   border-radius:10px;
   background: var(--primary);
   color: white;
@@ -117,7 +120,7 @@ button { font-family: inherit; }
   width: 100%;
   z-index: 10;
 }
-.question-banner h2{ margin:0; font-size:1.25rem; font-weight:700; line-height:1.2 }
+.question-banner h2{ margin:0; font-size:1.25rem; font-weight:700; line-height:1.2; width:100%; }
 .quiz-controls{ display:flex; gap:10px; align-items:center; position:absolute; left:16px; top:50%; transform:translateY(-50%); }
 .quiz-controls button{ min-width:96px; }
 .answers{ gap:14px }
