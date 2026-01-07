@@ -1,6 +1,4 @@
-# Mini Kahoot — Guía de uso (Español)
-
-Mini Kahoot es una aplicación estática (HTML/CSS/JS) para crear y realizar cuestionarios desde archivos JSON por temas. Está diseñada para usarse en navegadores de escritorio y móviles y puede desplegarse en cualquier hosting estático (GitHub Pages, Cloudflare Pages, Netlify...).
+# Mini Kahoot — Guía de uso
 
 IMPORTANTE: La app carga las preguntas mediante `fetch()` desde archivos JSON, por lo que debe servirse por HTTP/HTTPS (no funciona abriendo `index.html` con `file://`).
 
