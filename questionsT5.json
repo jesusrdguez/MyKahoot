@@ -1,0 +1,167 @@
+{
+  "title": "Tema 5",
+  "questions": [
+    {
+      "question": "Se tiene un fichero compuesto por 5 registros de 500 bytes cada uno. El fichero está almacenado en un sistema de ficheros con asignación de espacio enlazada, tamaño de bloque de 2 Kbytes, apuntadores de 32 bits y el primer bloque de datos que se asignó al fichero fue el 3100 y que, al crecer por el final, se le asignó el bloque 125. Indique cuál es el primer bloque ocupado por el primer registro del fichero. Los enlaces se sitúan al final del bloque.",
+      "answers": ["3099.", "125.", "3100.", "3101."],
+      "correct": 2,
+      "unit": 5
+    },
+    {
+      "question": "En la lectura de un archivo, el acceso secuencial se diferencia del acceso aleatorio en que se puede suponer que:",
+      "answers": ["Una vez leída la primera pista, en las restantes el retardo rotacional es despreciable.", "No existe diferencia alguna debido al tipo de acceso.", "Una vez leída la primera pista, en las restantes el tiempo de transferencia es despreciable.", "Una vez leída la primera pista, en las restantes el tiempo de búsqueda es despreciable."],
+      "correct": 3,
+      "unit": 5
+    },
+    {
+      "question": "Sea un sistema de ficheros con asignación de espacio mediante i-nodos, donde cada i-nodo tiene 10 entradas para acceso directo, 3 para acceso indirecto simple, 2 para acceso indirecto doble y 3 para acceso indirecto triple. El tamaño de bloque es de 2 Kbytes y el tamaño de los índices es de 64 bits. ¿Cuál es el número de bloques a los que se puede acceder usando los apuntadores indirectos triples?",
+      "answers": ["16777216.", "50331648.", "25165824.", "33554432."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "La lista de capacidades representa:",
+      "answers": ["Un mecanismo de protección y control de acceso.", "El mecanismo de asignación de memoria para las páginas nuevas que se sigue en la memoria virtual.", "Una tabla del sistema operativo que relaciona el conjunto de procesos con los recursos asignados a cada uno.", "Una tabla del sistema operativo en la que se representa el total de los recursos del sistema."],
+      "correct": 0,
+      "unit": 5
+    },
+    {
+      "question": "El mapa de bits sirve:",
+      "answers": ["Para mantener una lista de los bloques que se han modificado y deben ser actualizados en el disco.", "Como contador de las señales generadas de forma periódica por el reloj en tiempo real, RTR.", "Para mantener una lista del espacio libre en disco.", "Para indicar qué bloques componen la caché del disco."],
+      "correct": 2,
+      "unit": 5
+    },
+    {
+      "question": "La entrada especial para cada directorio “..”, (punto-punto), en los sistemas con directorios jerárquicos representa:",
+      "answers": ["Una entrada para el directorio hijo (el que está por debajo en la jerarquía).", "Una entrada para el propio directorio (con un puntero a sí mismo).", "Esta entrada sólo existe en los directorios de nivel único para simular diferentes niveles.", "Una entrada para el directorio padre (el que está por encima en la jerarquía)."],
+      "correct": 3,
+      "unit": 5
+    },
+    {
+      "question": "Sea un sistema de ficheros con asignación de espacio mediante i-nodos, donde cada i-nodo tiene 10 entradas para acceso directo, 3 para acceso indirecto simple, 2 para acceso indirecto doble y 3 para acceso indirecto triple. El tamaño de bloque es de 2 Kbytes y el tamaño de los índices es de 64 bits. ¿Cuál es el número de bloques a los que se puede acceder usando los apuntadores indirectos dobles?",
+      "answers": ["65536.", "131072.", "262144.", "32768."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "Sea un sistema de ficheros con asignación de espacio mediante i-nodos, donde cada i-nodo tiene 10 entradas para acceso directo, 3 para acceso indirecto simple, 2 para acceso indirecto doble y 3 para acceso indirecto triple. El tamaño de bloque es de 2 Kbytes y el tamaño de los índices es de 64 bits. ¿Cuál es el número de bloques a los que se puede acceder usando los apuntadores indirectos simples?",
+      "answers": ["512.", "1024.", "768.", "256."],
+      "correct": 2,
+      "unit": 5
+    },
+    {
+      "question": "Imagina un sistema de archivos como el de Linux, con la diferencia de que no se permiten enlaces a archivos. En este hipotético caso, la organización del sistema de ficheros sería:",
+      "answers": ["De árbol.", "De grafo acíclico.", "De grafo general.", "De dos niveles recursivos."],
+      "correct": 0,
+      "unit": 5
+    },
+    {
+      "question": "En Unix, el nodo-i (nodo índice) corresponde a una tabla:",
+      "answers": ["Con el conjunto de trabajo o conjunto de páginas utilizadas en un determinado momento por el proceso.", "Que cada proceso tiene asociado, con toda la información de los recursos que necesita y los que utiliza.", "Que cada archivo tiene asociado, con los atributos y las direcciones de los bloques del archivo.", "Que cada proceso tiene asociado, con toda la información que necesita el sistema para controlar su ejecución."],
+      "correct": 2,
+      "unit": 5
+    },
+    {
+      "question": "En la asignación del espacio de disco, el método mediante listas enlazadas presenta el inconveniente de que:",
+      "answers": ["El acceso aleatorio es extremadamente lento.", "La fragmentación externa resultante en el disco.", "El mapa de bits asociado para la gestión del espacio libre es muy grande.", "La pérdida de espacio debido a la tabla de índices."],
+      "correct": 0,
+      "unit": 5
+    },
+    {
+      "question": "La operación de apertura de fichero sirve para:",
+      "answers": ["Permitir que los dispositivos de entrada/salida inicien el controlador de DMA.", "El sistema operativo lleve el control de qué ficheros están siendo usados en cada momento.", "El sistema operativo pueda traer a memoria la FAT.", "Todas las respuestas son falsas."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "Sea un sistema de ficheros que contiene 2^32 bloques de 1024 bytes para guardar datos. ¿Qué tamaño debe tener cada entrada de la FAT si se emplean clusters de 4 bloques?:",
+      "answers": ["32 bits.", "30 bits.", "24 bits.", "No tiene sentido usar clusters cuando se trabaja con una FAT."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "En un sistema de ficheros con sistema de asignación enlazado, tamaño de bloque de 1K byte y tamaño de índice de 2 bytes, ¿cuál es el tamaño máximo de que puede llegar a tener un fichero?:",
+      "answers": ["262144.", "524288.", "65536.", "131072."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "Dentro de los mecanismos de protección y control de acceso de un sistema se encuentra:",
+      "answers": ["La lista enlazada.", "La tabla de índices.", "El conjunto de trabajo.", "La lista de capacidades."],
+      "correct": 3,
+      "unit": 5
+    },
+    {
+      "question": "Para obtener un listado de los nombres de los ficheros que hay en un determinado directorio:",
+      "answers": ["Los nombres de los ficheros forman parte de las entradas del directorio; basta con leerlos de él.", "Hay que abrir uno a uno los ficheros para averiguar su nombre y después volverlos a cerrar.", "Hay que acceder a la FAT para leer los nombres.", "Hay que acceder primero al i-nodo de cada fichero y después a la FAT."],
+      "correct": 0,
+      "unit": 5
+    },
+    {
+      "question": "Sea un sistema de ficheros con asignación de espacio mediante i-nodos, donde cada i-nodo tiene 10 entradas para acceso directo, 3 para acceso indirecto simple, 2 para acceso indirecto doble y 3 para acceso indirecto triple. El tamaño de bloque es de 2 Kbytes y el tamaño de los índices es de 64 bits. ¿Cuál es el número de bloques a los que se puede acceder usando los apuntadores directos?:",
+      "answers": ["8.", "10.", "12.", "16."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "Para la gestión del espacio libre de un disco de N bloques con L libres es necesario un mapa de bits:",
+      "answers": ["Con N bytes.", "Con N bits.", "Con L bytes.", "Con L bits."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "Se tiene un fichero compuesto por 5 registros de 500 bytes cada uno. El fichero está almacenado a partir del bloque 1100 de un sistema de ficheros con asignación de espacio contigua y tamaño de bloque de 2 Kbytes. Indique cuál es el último bloque ocupado por el último registro del fichero.:",
+      "answers": ["1100.", "1101.", "1102.", "1099."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "¿Qué tipo de directorios se emplean en Linux?:",
+      "answers": ["De grafo general.", "De grafo acíclico.", "De dos niveles con bifurcación par.", "De árbol."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "Para la gestión del espacio libre en disco se utiliza el siguiente método:",
+      "answers": ["El mapa de bits.", "Se gestiona mediante llamadas al sistema operativo.", "El mapa de words.", "La regla del cincuenta por ciento."],
+      "correct": 0,
+      "unit": 5
+    },
+    {
+      "question": "Para la gestión del espacio libre en disco se utiliza el siguiente método:",
+      "answers": ["No es ninguna entrada.", "Una entrada para el directorio \"padre\".", "Una entrada para el directorio raíz.", "Una entrada para el propio directorio."],
+      "correct": 3,
+      "unit": 5
+    },
+    {
+      "question": "El tiempo total empleado en la lectura de un archivo:",
+      "answers": ["Es mayor cuando el acceso es secuencial que cuando es aleatorio.", "Es parecido cuando el acceso es secuencial que cuando es aleatorio.", "Depende del orden en que se leen los sectores del disco.", "Es menor cuando el acceso es secuencial que cuando es aleatorio."],
+      "correct": 2,
+      "unit": 5
+    },
+    {
+      "question": "En la asignación de espacio de disco el método de asignación contiguo presenta el siguiente inconveniente:",
+      "answers": ["El acceso aleatorio es extremadamente lento.", "El mapa de bits asociado para la gestión del espacio libre es muy grande.", "La pérdida de espacio debido a la tabla de índices.", "La fragmentación externa resultante en el disco."],
+      "correct": 3,
+      "unit": 5
+    },
+    {
+      "question": "Un sistema de ficheros que usa asignación con listas enlazadas, con un tamaño de bloque de 1 Kbyte y tamaño de enlace de 2 bytes permite un tamaño máximo de fichero de:",
+      "answers": ["65407 Kbytes.", "65408 Kbytes.", "65536 Kbytes.", "2^16 bloques."],
+      "correct": 1,
+      "unit": 5
+    },
+    {
+      "question": "El método de listas enlazadas para la asignación del espacio en disco presenta el siguiente inconveniente:",
+      "answers": ["La fragmentación externa resultante en el disco.", "La pérdida de espacio debido a las tablas de índices.", "Es necesario conocer el tamaño máximo de archivo en el momento de su creación.", "El acceso aleatorio a un archivo es extremadamente lento."],
+      "correct": 3,
+      "unit": 5
+    },
+    {
+      "question": "En un sistema operativo se utiliza una estructura de nodos-i parecida a la de Unix. Los bloques son de 1024 bytes y tamaño de los punteros a bloques es de 32 bits. El nodo-i tiene un cierto número de entradas de direccionamiento directo, una de direccionamiento indirecto simple y otra de direccionamiento indirecto doble. Sabiendo que el tamaño máximo de un archivo es de 65800 Kbytes, ¿cuántas entradas directas hay en el i-nodo?",
+      "answers": ["6", "7", "8", "9"],
+      "correct": 2,
+      "unit": 5
+    }
+  ]
+}

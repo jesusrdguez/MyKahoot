@@ -1,0 +1,251 @@
+{
+  "title": "Tema 4 - Discos y E/S",
+  "questions": [
+    {
+      "question": "El retardo rotacional depende de:",
+      "answers": ["El número de bytes que se desean transmitir.", "El número de bytes que hay en una pista.", "La velocidad de rotación en revoluciones/seg.", "Una constante que depende de la unidad de disco."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "Cuándo tienen lugar muy pocos accesos a disco cualquier algoritmo de planificación de disco tiende a aproximarse a:",
+      "answers": ["El algoritmo de planificación: SSTF.", "El algoritmo de planificación: SCAN.", "El algoritmo de planificación: C-SCAN.", "El algoritmo de planificación: FCFS."],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "El Tiempo de _____ es el tiempo para que el brazo de acceso alcance el cilindro deseado.",
+      "answers": ["Latencia.", "Transferencia.", "Búsqueda.", "Acceso."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "El algoritmo SSTF (Shortest Service Time First) para peticiones pendientes de disco tiene el inconveniente de:",
+      "answers": ["El bloqueo indefinido de algunas peticiones.", "El retraso en las peticiones que se corresponden con posiciones que están por detrás de la cabeza.", "Las desventajas sobre peticiones intermedias frente a las localizadas en los cilindros más internos y externos.", "Los movimientos bruscos de vaivén a los que está sometido la cabeza de l/e."],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "El Tiempo de _____ es el retardo (medio) para que la rotación del disco posicione el sector solicitado sobre la cabeza de lectura-grabación del mecanismo.",
+      "answers": ["Transferencia.", "Acceso.", "Latencia.", "Búsqueda."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "La independencia de dispositivo implica:",
+      "answers": ["Ninguna respuesta es correcta.", "Lograr que el tiempo de lectura/escritura sea el mismo independientemente del dispositivo utilizado.", "El sistema operativo está liberado de realizar la gestión de E/S.", "Utilizar todos los dispositivos de E/S con una visión uniforme."],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "Para un disco duro que gira a 4200 RPM, el tiempo de latencia medio es de _____ ms.",
+      "answers": ["5,55.", "4,17.", "7,14.", "2,86."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "Los dispositivos de cinta magnética son de naturaleza secuencial. Si organizamos un sistema de archivos sobre una cinta, ¿es posible realizar accesos directos sobre los archivos?",
+      "answers": ["Sólo es posible si se trata de cintas en cartucho (tipo cassete), no en bobina.", "Sólo es posible si el sistema operativo es independiente del dispositivo.", "Es imposible, por la naturaleza secuencial del dispositivo.", "Es posible, pero sería extremadamente ineficiente."],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "El tiempo de latencia depende en gran parte de la velocidad rotacional del disco, medida en _____.",
+      "answers": ["Hz.", "Bytes/segundo.", "rpm.", "Sectores."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "Un _____ es un área de memoria principal para guardar datos durante transferencias de entrada o salida.",
+      "answers": ["Caché.", "Buffer.", "Spool.", "Marco de página."],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "Es común construir conjuntos RAID 5 de seis discos con un disco de reserva en línea (denominado _____) que permite empezar de inmediato la reconstrucción en caso de fallo del conjunto.",
+      "answers": ["cold spare", "hot spare standby", "mirror backup", "parity disk"],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "El tiempo de acceso es:",
+      "answers": ["El tiempo de búsqueda + el tiempo rotacional.", "El tiempo de búsqueda + el tiempo rotacional + el tiempo de transferencia.", "El tiempo de búsqueda.", "No existe ese concepto."],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "Un RAID _____ crea una copia exacta (o espejo) de un conjunto de datos en dos o más discos. Esto resulta útil cuando el rendimiento en lectura es más importante que la capacidad.",
+      "answers": ["1+0", "5", "1", "0"],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "El tiempo de _____ es el tiempo que se tarda en satisfacer una petición de entrada salida.",
+      "answers": ["Transferencia", "Búsqueda", "Latencia", "Acceso"],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "Para un disco duro que gira a 4200 RPM, el tiempo de latencia medio es de:",
+      "answers": ["2", "4,17", "7,14", "5,55", "3"],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "Un RAID _____ es un RAID usado para replicar y compartir datos entre varios discos. Un RAID _____ es una división de espejos.",
+      "answers": ["5+0", "5+1", "1+0", "0+1"],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "Un sistema operativo independiente de dispositivo:",
+      "answers": ["Indica que el sistema operativo está liberado de realizar la gestión de E/S.", "La gestión de E/S no es capaz de distinguir entre los diferentes periféricos.", "La gestión de E/S no es capaz de distinguir entre los diferentes periféricos.", "No utiliza manejadores de dispositivo, sólo de interrupciones."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "La comunicación es asíncrona cuando el proceso que envía el mensaje:",
+      "answers": ["Lo realiza de manera indirecta, es decir, a través de un buzón.", "Sólo prosigue su ejecución cuando ha recibido una respuesta del receptor.", "Sigue su ejecución sin preocuparse de si el mensaje se recibe o no.", "Sólo prosigue su tarea cuando el mensaje ha sido recibido."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "El retardo rotacional corresponde a:",
+      "answers": ["El tiempo necesario para que las cabezas del disco se desplacen al cilindro adecuado.", "El tiempo que tarda el algoritmo de sustitución en seleccionar una página cuando se produce un fallo de página.", "El tiempo que se tarda en transferir los datos en un disco.", "El tiempo medio que tarda el sector en estar debajo de la cabeza de lectura/escritura del disco."],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "Si tengo 3 discos duros de 512 Gb configurados en RAID 0, el espacio total disponible es:",
+      "answers": ["1536", "512", "No es posible esta configuración.", "1024"],
+      "correct": 0,
+      "unit": 4
+    },
+    {
+      "question": "Para un disco duro que gira a 7200 RPM, el tiempo de latencia medio es de _____ ms.",
+      "answers": ["3,33", "4,16", "5,55", "7,14"],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "Gracias al uso de _____, los dispositivos pueden avisar al sistema operativo de que algo ha ocurrido mientras el procesador ejecuta cualquier tarea.",
+      "answers": ["buffers", "spooling", "interrupciones", "DMA"],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "El tiempo de _____ es el tiempo durante el cual los datos son realmente leídos o escritos en el disco.",
+      "answers": ["latencia", "acceso", "búsqueda", "transferencia"],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "¿Cuál de estas técnicas no tiene como fin solapar la ejecución de instrucciones en CPU con la ejecución de operaciones de entrada/salida?",
+      "answers": ["Spooling.", "Modo dual de operación.", "Procesamiento fuera de línea (off-line).", "Acceso directo a memoria (DMA)."],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "Un RAID _____ (también llamado conjunto dividido o volumen dividido) distribuye los datos equitativamente entre dos o más discos sin información de paridad que proporcione redundancia.",
+      "answers": ["1+0", "1", "5", "0"],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "Si tengo 3 discos duros de 512 Gb configurados en RAID 1, el espacio total disponible es:",
+      "answers": ["1536", "1024", "No es posible esta configuración.", "512"],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "La idea básica del mecanismo de E/S por interrupciones consiste en:",
+      "answers": ["Buscar mecanismos de interactividad.", "Disponer de un mecanismo acceso directo a memoria.", "Impedir que la CPU esté ociosa mientras espera por E/S.", "Fijar un tiempo límite de servicio de E/S, superado el cual se interrumpe la operación pendiente."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "La E/S controlada por programa corresponde a:",
+      "answers": ["Una transferencia de E/S a memoria directa.", "Una transferencia de E/S a memoria con interrupciones.", "Una transferencia de E/S a memoria a través de la CPU.", "Una transferencia de E/S a memoria a través de un procesador de E/S (PE/S)."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "Si tengo 3 discos duros de 512 Gb configurados en RAID 0+1, el espacio total disponible es:",
+      "answers": ["1536", "No es posible esta configuración.", "512", "1024"],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "Para un disco duro que gira a 10000 RPM, el tiempo de latencia medio es de _____ ms.",
+      "answers": ["2", "3", "4", "5"],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "Si tengo 3 discos duros de 512 Gb configurados en RAID 5, el espacio total disponible es:",
+      "answers": ["1536", "No es posible esta configuración.", "512", "1024"],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "Un RAID _____ usa división de datos a nivel de bloques distribuyendo la información de paridad entre todos los discos miembros del conjunto.",
+      "answers": ["1+0", "5", "1", "0"],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "El tiempo de acceso de un disco se calcula como la suma del tiempo de búsqueda + el tiempo de _____ + tiempo de transferencia:",
+      "answers": ["acceso", "latencia", "rotación", "espera"],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "El tiempo de acceso de un disco se calcula como la suma del tiempo de _____ + el tiempo de latencia + tiempo de transferencia:",
+      "answers": ["rotación", "acceso", "búsqueda", "espera"],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "Un sistema operativo independiente de dispositivo:",
+      "answers": ["Elimina la necesidad de controladores de dispositivo.", "Designa de manera uniforme a cada uno de los dispositivos, por ejemplo, en Unix se referencian como archivos.", "Obliga a que todos los dispositivos funcionen al mismo ritmo.", "No permite acceso directo a hardware específico."],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "El controlador de E/S y la memoria intercambian datos directamente, sin la intervención de la CPU, cuando se tiene:",
+      "answers": ["Spooling", "Interrupciones", "DMA", "Buffering"],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "El retardo rotacional corresponde a:",
+      "answers": ["El tiempo que tarda el brazo en alcanzar el cilindro deseado.", "El tiempo de transferencia de datos.", "El tiempo medio que tarda el sector en estar debajo de la cabeza de lectura/escritura del disco.", "El tiempo de espera en cola del dispositivo."],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "Para un disco duro que gira a 5400 RPM, el tiempo de latencia medio es de _____ ms.",
+      "answers": ["7,14", "5,5", "4,16", "3"],
+      "correct": 1,
+      "unit": 4
+    },
+    {
+      "question": "El tiempo de acceso de un disco se calcula como la suma del tiempo de búsqueda + el tiempo de latencia + tiempo de _____:",
+      "answers": ["espera", "rotación", "acceso", "transferencia"],
+      "correct": 3,
+      "unit": 4
+    },
+    {
+      "question": "Con la técnica del _____ se utiliza el disco como un enorme búfer.",
+      "answers": ["buffering", "caching", "spooling", "swapping"],
+      "correct": 2,
+      "unit": 4
+    },
+    {
+      "question": "El tiempo de búsqueda corresponde a:",
+      "answers": ["El tiempo medio que tarda el sector en colocarse bajo la cabeza.", "El tiempo necesario para que las cabezas del disco se desplacen al cilindro adecuado.", "El tiempo que tarda la transferencia de datos.", "El tiempo total de acceso al disco."],
+      "correct": 1,
+      "unit": 4
+    }
+  ]
+}

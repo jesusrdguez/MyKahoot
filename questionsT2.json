@@ -1,0 +1,437 @@
+{
+  "title": "Preguntas Tema 2 - Planificación y Procesos",
+  "questions": [
+    {
+      "unit": 2,
+      "id": 1,
+      "question": "¿En qué nivel de planificación de procesos se encuentra el componente llamado despachador o dispatcher?:",
+      "answers": [
+        "En el planificador de corto plazo.",
+        "En el planificador de medio plazo.",
+        "En el planificador de largo plazo.",
+        "Dependiendo del sistema operativo, puede estar en el de medio plazo o en el de largo plazo."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 2,
+      "question": "Se tienen dos procesos: P1 y P2, de tiempos de ejecución 25 y 30 ms, respectivamente. El planificador a corto plazo actúa según el algoritmo Round Robin con quantum de 10 ms. ¿Cuál será el tiempo de servicio de P1?:",
+      "answers": [
+        "45 ms.",
+        "65 ms.",
+        "50 ms.",
+        "70 ms."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 3,
+      "question": "El sistema encargado de seleccionar al proceso que pasa a ejecución de entre los preparados es:",
+      "answers": [
+        "El reubicador.",
+        "El planificador a largo plazo.",
+        "El planificador a corto plazo.",
+        "El planificador a medio plazo."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 2,
+      "id": 4,
+      "question": "Si comparamos los resultados de 4 algoritmos de planificación:",
+      "answers": [
+        "El algoritmo que proporciona el mayor tiempo de servicio medio es el mejor.",
+        "El algoritmo que proporciona el menor tiempo de espera medio es el mejor.",
+        "El algoritmo que proporciona el mayor índice de servicio medio es el mejor.",
+        "El algoritmo que proporciona el menor índice de servicio medio es el mejor."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 2,
+      "id": 5,
+      "question": "Las interrupciones son usadas:",
+      "answers": [
+        "Ninguna respuesta es correcta.",
+        "Para diferenciar dispositivos por niveles.",
+        "Para chequear el estado del dispositivo.",
+        "Para avisar de un final de entrada-salida de dispositivo."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 6,
+      "question": "Un sistema de tiempo compartido:",
+      "answers": [
+        "Es un sistema multiprogramado y a la inversa también se cumple.",
+        "Ninguna de las anteriores.",
+        "Es un sistema monoprogramado y a la inversa también se cumple.",
+        "Es un sistema multiprogramado pero no a la inversa."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 7,
+      "question": "El vector de interrupciones se encuentra situado en:",
+      "answers": [
+        "Ninguna respuesta es correcta.",
+        "En el disco.",
+        "En la rutina de tratamiento de la interrupción.",
+        "El PCB."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 8,
+      "question": "Dos hebras no comparten:",
+      "answers": [
+        "El contador de programa.",
+        "Ninguna respuesta es correcta.",
+        "Espacio de direcciones.",
+        "Archivos abiertos."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 9,
+      "question": "¿Cuál es el orden de ejecución de los procesos P1, P2 y P3 según el algoritmo SRT si sus tiempos de ejecución son 15ms, 5ms y 15 ms respectivamente y el orden de llegada al sistema es 0 ms, 5ms y 10 ms?:",
+      "answers": [
+        "P1, P2 y P3.",
+        "P1, P2, P1 y P3.",
+        "P2, P1 y P3.",
+        "No se pude determinar al haber dos procesos con el mismo tiempo de ejecución."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 2,
+      "id": 10,
+      "question": "En un sistema operativo monousuario y monoprogramado:",
+      "answers": [
+        "Todas las respuestas son correctas.",
+        "En memoria sólo puede haber un proceso.",
+        "Se acepta una única conexión de varios usuarios.",
+        "Se aceptan varias conexiones de varios usuarios."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 2,
+      "id": 11,
+      "question": "¿Qué política de planificación es mejor en ambientes muy interactivos?:",
+      "answers": [
+        "SJF.",
+        "FCFS.",
+        "Round Robin.",
+        "SRT."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 2,
+      "id": 12,
+      "question": "En sistemas Unix...¿qué respuesta es incorrecta?:",
+      "answers": [
+        "Se dispone de al menos 99 niveles de prioridad.",
+        "Se elije siempre al proceso o hilo con la prioridad más alta.",
+        "Si un proceso es expulsado por otro de mayor prioridad sin agotar su quantum, se coloca el primero de su cola con lo que le queda de quantum.",
+        "Estas disponibles las políticas de planificación: Fifo, Round Robin y otra opcional."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 13,
+      "question": "El registro IR:",
+      "answers": [
+        "Es un registro de base.",
+        "Es un registro de control y estado.",
+        "Es un registro de dirección.",
+        "Es un registro de datos."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 2,
+      "id": 14,
+      "question": "En una gestión apropiativa del procesador:",
+      "answers": [
+        "Ninguna respuesta es correcta.",
+        "El sistema operativo no puede quitar el procesador al programa que se está ejecutando.",
+        "El sistema operativo puede quitar el procesador al programa que se está ejecutando.",
+        "Un programa puede quitar el procesador al programa que se está ejecutando."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 2,
+      "id": 15,
+      "question": "Se tienen 3 procesos: P1, P2 y P3, con tiempos de ejecución: 85, 45 y 118 ms, respectivamente. Si actúa el planificador a corto plazo según el algoritmo SJF (Short Job First) se obtiene que:",
+      "answers": [
+        "Los procesos se ejecutan según la prioridad que posean los procesos.",
+        "Los procesos se encuentran en la lista de preparados en el orden: P3, P1 y P2.",
+        "Los procesos se encuentran en la lista de preparados en el orden de llegada: P1, P2 y P3.",
+        "Los procesos se encuentran en la lista de preparados en el orden: P2, P1 y P3."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 16,
+      "question": "El tiempo de retorno corresponde:",
+      "answers": [
+        "Al tiempo que transcurre desde que un proceso se crea hasta que se completa por el sistema.",
+        "Al porcentaje del tiempo medio de utilización del procesador.",
+        "A la medida del número de procesos completados por unidad de tiempo.",
+        "Al tiempo que el proceso espera hasta que se le concede el procesador."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 17,
+      "question": "Llega una interrupción procedente de un dispositivo de E/S mientras un proceso de usuario se está ejecutando. ¿Qué suele ocurrir justo a continuación?:",
+      "answers": [
+        "Se atiende la interrupción de forma inmediata, en el modo de operación en el que se encontraba el procesador en el momento de ocurrir la operación.",
+        "Se conmuta a modo usuario para que el proceso dialogue con la E/S de acuerdo con sus necesidades.",
+        "Se ignora la interrupción, ya que el sistema está ejecutando código en modo usuario y si se atiende aquella, podría haber problemas de seguridad.",
+        "Se conmuta a modo supervisor y se ejecuta la rutina de servicio de interrupción correspondiente."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 18,
+      "question": "En la planificación Round Robin:",
+      "answers": [
+        "El proceso preparado que pasa a ejecución corresponde al de tiempo de ejecución restante más corto.",
+        "Cada proceso preparado pasa a ejecución de forma secuencial.",
+        "Ninguna de las anteriores.",
+        "De forma secuencial cada proceso preparado pasa a ejecución durante una cota de tiempo llamada quantum."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 19,
+      "question": "Algunas de las ventajas del uso de hebras son:",
+      "answers": [
+        "Es más rápido terminar el proceso que uno de sus hilos.",
+        "Todas las respuestas son correctas.",
+        "Es más rápido crear un proceso nuevo que un hilo en un proceso existente.",
+        "Es más rápido cambiar entre dos hilos de un mismo proceso que cambiar de proceso."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 20,
+      "question": "¿Cuál de las siguientes afirmaciones es correcta?:",
+      "answers": [
+        "Un sistema operativo que soporta tiempo compartido también soporta multitarea.",
+        "Un sistema operativo que soporta multitarea también soporta tiempo compartido.",
+        "Un sistema operativo que soporta monotarea también soporta multitarea.",
+        "Un sistema operativo que soporta monotarea también soporta tiempo compartido."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 21,
+      "question": "¿Cuál es la principal diferencia entre los algoritmos SJF y SRT?:",
+      "answers": [
+        "El primero es apropiativo y el segundo no.",
+        "El segundo es más fiable.",
+        "El primero es más eficiente que el segundo.",
+        "Ninguna respuesta es correcta."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 22,
+      "question": "¿A qué nos referimos cuando hablamos de Interrupciones Múltiples?:",
+      "answers": [
+        "Ninguna respuesta es correcta.",
+        "A que son muchas las interrupciones que nos pueden llegar en un sistema.",
+        "A permitir que llegue una interrupción mientras se está atendiendo a otra.",
+        "A que llegan muchas interrupciones por unidad de tiempo."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 2,
+      "id": 23,
+      "question": "El planificador a corto plazo selecciona:",
+      "answers": [
+        "La página en memoria que se debe sustituir por la página que se solicita cuando se produce un fallo de página.",
+        "Entre las peticiones de E/S al disco aquella que minimiza el tiempo medio de búsqueda.",
+        "El proceso que pasa al estado activo (ejecución) de entre todos los procesos en estado preparado.",
+        "El trabajo que se admite en el sistema para su procesamiento."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 2,
+      "id": 24,
+      "question": "¿Cuál es el orden de ejecución de los procesos P1, P2 y P3 según el algoritmo SJF si sus tiempos de ejecución son 15ms, 5ms y 15 ms respectivamente y el orden de llegada al sistema es 0 ms, 5ms y 10 ms?:",
+      "answers": [
+        "P2, P1 y P3.",
+        "P1, P2 y P3.",
+        "P1, P2, P1 y P3.",
+        "No se puede determinar."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 2,
+      "id": 25,
+      "question": "Supongamos que en un momento dado llegan a un sistema N procesos, cada uno de ellos con una sola ráfaga de CPU y todos ellos con exactamente la misma duración. Cuando se planifica esta carga de trabajo, dependiendo de la política, podemos afirmar lo siguiente sobre el tiempo medio de espera:",
+      "answers": [
+        "El tiempo medio de espera con SJF y RR será el mismo.",
+        "El tiempo medio de espera con FCFS, SJF y RR será el mismo.",
+        "Como las duraciones son iguales, el tiempo medio de espera será el mismo, cualquiera que sea la política de planificación empleada.",
+        "El tiempo medio de espera con FCFS y SJF será el mismo."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 26,
+      "question": "El planificador a medio plazo selecciona un proceso:",
+      "answers": [
+        "De entre los recién llegados para pasar a la cola de preparados.",
+        "De entre los suspendidos en memoria secundaria para pasar a la cola de preparados.",
+        "De entre los de la cola de preparados para pasar a ejecución.",
+        "De entre los suspendidos en memoria principal para pasar a la cola de preparados."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 2,
+      "id": 27,
+      "question": "A la hora de hacer los problemas, el orden establecido de llegada de sucesos es:",
+      "answers": [
+        "Fin del quantum, llegada de proceso, fin de E/S.",
+        "Llegada de proceso, fin de E/S, fin del quantum.",
+        "Fin del quantum, fin de E/S, llegada de proceso.",
+        "Llegada de proceso, fin del quantum, fin de E/S."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 2,
+      "id": 28,
+      "question": "Cuando se produce un cambio de contexto:",
+      "answers": [
+        "Se produce cambio de proceso.",
+        "Se ejecuta el planificador.",
+        "Se ejecuta el despachador.",
+        "Ninguna respuesta es correcta."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 2,
+      "id": 29,
+      "question": "¿Cuál de las siguientes transiciones de estado de procesos es incorrecta?:",
+      "answers": [
+        "Inactivo a preparado.",
+        "Preparado a bloqueado.",
+        "Bloqueado a suspendido bloqueado.",
+        "Ejecución a preparado."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 2,
+      "id": 30,
+      "question": "El PCB de un proceso contiene, al menos:",
+      "answers": [
+        "Todas las afirmaciones anteriores son correctas.",
+        "El código, los datos y la pila de un proceso.",
+        "El estado y el identificador de un proceso.",
+        "El grado de multiprogramación de un proceso."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 2,
+      "id": 31,
+      "question": "¿Qué información se guarda en el PCB del proceso?:",
+      "answers": [
+        "La prioridad.",
+        "Los ficheros abiertos.",
+        "Todas son correctas.",
+        "El identificador del proceso padre."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 2,
+      "id": 32,
+      "question": "De los siguientes elementos, ¿cuál no es parte del PCB ni se almacena en él?:",
+      "answers": [
+        "El gestor de interrupciones.",
+        "El estado del proceso.",
+        "El contador de programa del proceso.",
+        "La información de planificación del proceso."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 33,
+      "question": "¿En qué nivel de ejecución se es más restrictivo?:",
+      "answers": [
+        "En el nivel usuario.",
+        "En el nivel supervisor.",
+        "En el nivel núcleo con paginación activa.",
+        "En el nivel de ejecución del despachador."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 34,
+      "question": "El área de Swap o intercambio se usa para…",
+      "answers": [
+        "Almacenar los procesos suspendidos.",
+        "Guardar temporalmente las páginas modificadas de la caché.",
+        "Ejecutar procesos con baja prioridad cuando no hay memoria.",
+        "Mantener copias de seguridad del espacio de direcciones."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 35,
+      "question": "El tiempo de servicio corresponde matemáticamente:",
+      "answers": [
+        "Al tiempo de procesador más el tiempo de espera.",
+        "Al tiempo total de retorno menos el tiempo de entrada/salida.",
+        "Al tiempo medio de utilización del procesador.",
+        "Al tiempo transcurrido desde la llegada hasta la primera ejecución."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 2,
+      "id": 36,
+      "question": "El tiempo de procesador coincide con el tiempo de ejecución:",
+      "answers": [
+        "Sólo si no hay entrada-salida.",
+        "Siempre que el sistema sea monoprogramado.",
+        "Únicamente en sistemas sin planificación apropiativa.",
+        "Cuando el proceso no sufre cambios de contexto."
+      ],
+      "correct": 0
+    }
+  ]
+}

@@ -1,0 +1,691 @@
+{
+  "title": "Preguntas Sistemas Operativos",
+  "questions": [
+    {
+      "unit": 1,
+      "id": 1,
+      "question": "Según la clasificación por utilización de recursos que se hace de los sistemas operativos, estos se dividen en:",
+      "answers": [
+        "Sistemas operativos monoprogramados, sistemas operativos multitarea y sistemas operativos de multiprocesamiento.",
+        "Sistemas operativos de tiempo real, sistemas operativos de tiempo compartido y sistemas operativos de procesamiento por lotes.",
+        "Sistemas operativos de monousuario y sistemas operativos multiusuario.",
+        "Sistemas operativos de propósito general y sistemas operativos de propósito específico."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 1,
+      "id": 2,
+      "question": "Los objetivos que persigue un sistema operativo son:",
+      "answers": [
+        "Incrementar la productividad del usuario.",
+        "Incrementar la productividad del hardware.",
+        "Incrementar la productividad del hardware en grandes computadoras e incrementar la productividad del usuario en pequeñas computadoras.",
+        "Incrementar la productividad del hardware en pequeñas computadoras e incrementar la productividad del usuario en grandes computadoras."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 3,
+      "question": "Un sistema operativo monolítico:",
+      "answers": [
+        "Es modular.",
+        "No tiene una buena definición de las interfaces de las funciones.",
+        "Es muy adaptable.",
+        "No presenta ninguna de las cualidades del resto de respuestas."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 4,
+      "question": "Las llamadas al sistema se pueden clasificar en las siguientes categorías:",
+      "answers": [
+        "Ejecución de programas, órdenes de E/S, gestión de ficheros.",
+        "Ejecución de programas, órdenes de E/S, gestión de ficheros, tratamiento de errores.",
+        "Ejecución de programas, órdenes de E/S, tratamiento de errores.",
+        "Ejecución de programas, gestión de ficheros, tratamiento de errores."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 5,
+      "question": "La principal función del kernel en un sistema operativo microkernel o cliente/servidor es:",
+      "answers": [
+        "Ninguna es correcta.",
+        "Gestionar la memoria asociada a los procesos servidores.",
+        "Crear procesos servidores según lo soliciten los clientes.",
+        "Establecer la comunicación entre procesos clientes y servidores."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 6,
+      "question": "El tipo de sistema operativo más adecuado para instalar en una empresa de viajes es:",
+      "answers": [
+        "Ninguna de las afirmaciones es correcta.",
+        "Un sistema operativo con tiempo compartido.",
+        "Un sistema operativo con multitarea.",
+        "Un sistema operativo con monotarea."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 7,
+      "question": "La forma más habitual de acceder a los servicios de un Sistema Operativos es:",
+      "answers": [
+        "Ninguna respuesta es correcta.",
+        "Mediante una Shell en Linux y un interfaz gráfico en Windows.",
+        "Mediante las librerías estándar de C.",
+        "Mediante llamadas al sistema."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 8,
+      "question": "Un sistema operativo por lotes se caracteriza por:",
+      "answers": [
+        "No existen restricciones de tiempo.",
+        "Procesamiento de trabajos largos.",
+        "No existe intervención del usuario durante la ejecución de los trabajos.",
+        "Todas las respuestas son correctas."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 9,
+      "question": "El sistema operativo se engloba dentro del:",
+      "answers": [
+        "Ninguna es correcta.",
+        "Software de Usuario.",
+        "Software de sistema.",
+        "Firmware."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 10,
+      "question": "En un sistema operativo jerárquico:",
+      "answers": [
+        "Se forma una estructura de capas en donde las funciones situadas en las capas más externas pueden usar cualquier función situada en una capa inferior.",
+        "Todas las afirmaciones que se dan son correctas.",
+        "El acceso a capas inferiores sólo se realiza a través de una función de entrada denominada trap.",
+        "Se sigue un diseño modular."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 11,
+      "question": "Los sistemas operativos de tiempo real se caracterizan por:",
+      "answers": [
+        "Fuertes restricciones en el tiempo de respuesta.",
+        "La información tiene que estar permanentemente actualizada.",
+        "Infrautilización.",
+        "Todas las respuestas son correctas."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 12,
+      "question": "En una gestión apropiativa del procesador:",
+      "answers": [
+        "Ninguna respuesta es cierta.",
+        "El SO no puede quitar el procesador al programa que se está ejecutando.",
+        "El sistema operativo puede quitar el procesador al programa que se está ejecutando.",
+        "Un programa puede quitar el procesador al programa que se está ejecutando."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 13,
+      "question": "¿Cuáles son los 4 componentes básicos de un sistema operativo?:",
+      "answers": [
+        "Administración de usuarios, Gestión de memoria, Sistema de Ficheros, Administración de E/S.",
+        "Administración de procesos, Gestión de memoria, Administración de E/S, Gestión de interrupciones.",
+        "Administración de procesos, Gestión de memoria, Sistema de Ficheros, Gestión de interrupciones.",
+        "Administración de procesos, Gestión de memoria, Sistema de Ficheros, Administración de E/S."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 14,
+      "question": "Durante la segunda generación o etapa en la historia de los sistemas operativos, la tecnología en el diseño de los computadores es:",
+      "answers": [
+        "Tecnología de circuitos LSI y VLSI.",
+        "Tubo de vacío.",
+        "El transistor.",
+        "Circuitos integrados."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 15,
+      "question": "¿Qué afirmación es cierta?:",
+      "answers": [
+        "Un sistema operativo es un programa (o conjunto de programas) de control que tiene por objeto facilitar el uso de la computadora y conseguir que ésta se utilice eficientemente.",
+        "Todas son ciertas.",
+        "El objetivo fundamental de los sistemas operativos es gestionar y administrar eficientemente los recursos hardware, permitiendo la ejecución concurrente de programas sin conflictos.",
+        "Un sistema operativo es un programa de control que se encarga de gestionar y asignar los recursos hardware."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 16,
+      "question": "El SO ofrece un conjunto de servicios que proporciona una visión extendida de la computadora mediante:",
+      "answers": [
+        "Los programas de usuario.",
+        "Ninguna es correcta.",
+        "Las llamadas al sistema.",
+        "El intérprete de comandos."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 17,
+      "question": "Durante la cuarta generación o etapa en la historia de los sistemas operativos, la tecnología en el diseño de los computadores fue:",
+      "answers": [
+        "El transistor.",
+        "Circuitos integrados.",
+        "Tecnología de circuitos LSI y VLSI.",
+        "Tubo de vacío."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 18,
+      "question": "Atendiendo a las diferentes estructuras en los Sistemas Operativos, ¿cuál de las siguientes afirmaciones es correcta?:",
+      "answers": [
+        "Ninguna de las afirmaciones que se hacen son ciertas.",
+        "En sistemas jerárquicos las capas funcionan de forma independiente sin relación entre ellas.",
+        "En sistemas Cliente-Servidor, la principal misión del núcleo es establecer la comunicación entre Cliente y Servidor.",
+        "En sistemas monolíticos la principal ventaja es la modularidad."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 1,
+      "id": 19,
+      "question": "La multiprogramación surge en:",
+      "answers": [
+        "Cuarta generación de Ordenadores.",
+        "Primera generación de Ordenadores.",
+        "Segunda generación de Ordenadores.",
+        "Tercera generación de Ordenadores."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 20,
+      "question": "En un sistema operativo que sigue una estructura monolítica:",
+      "answers": [
+        "Hay un único programa.",
+        "Las rutinas no tienen un interfaz bien definido.",
+        "Un conjunto de rutinas sólo puede invocar a otro conjunto de rutinas.",
+        "Tiene una estructura bien definida."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 21,
+      "question": "Durante la cuarta generación o etapa en la historia de los sistemas operativos:",
+      "answers": [
+        "Aparece la multiprogramación.",
+        "Aparecen los sistemas operativos distribuidos y en red.",
+        "Aparece la multiprogramación y el tiempo compartido.",
+        "Aparece el procesamiento batch."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 22,
+      "question": "En un sistema operativo de tiempo compartido, la entidad básica a controlar es:",
+      "answers": ["El usuario.", "La tarea.", "El proceso.", "La sesión."],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 23,
+      "question": "Un sistema operativo con una arquitectura jerárquica, suele tener las siguientes capas:",
+      "answers": [
+        "Planificación del procesador, Gestión de memoria, Gestión de E/S, Programas de usuario.",
+        "Planificación del procesador, Gestión de memoria, Gestión de E/S, Subsistema de ficheros, Programas de usuario.",
+        "Planificación del procesador, Gestión de memoria, Gestión de E/S, Subsistema de ficheros, Programas de sistema.",
+        "Planificación del procesador, Gestión de memoria, Gestión de E/S, Subsistema de ficheros."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 24,
+      "question": "Para realizar un sistema de tiempo compartido es necesario:",
+      "answers": [
+        "Más de una CPU.",
+        "La multiprogramación.",
+        "Todas son correctas.",
+        "Un sistema multiusuario."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 25,
+      "question": "Las llamadas al sistema:",
+      "answers": [
+        "Son servicios del sistema operativo que no pueden ser invocados por los procesos de usuario.",
+        "Son programas del núcleo del sistema operativo.",
+        "Son órdenes del intérprete de órdenes.",
+        "Ninguna es cierta."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 26,
+      "question": "Durante la primera etapa o generación de la historia de los sistemas operativos:",
+      "answers": [
+        "No existían los sistemas operativos.",
+        "A los sistemas operativos se les denominaba cargadores.",
+        "Los sistemas operativos se programaban en ensamblador.",
+        "Los sistemas operativos se programaban en código máquina."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 1,
+      "id": 27,
+      "question": "¿Cuál de las siguientes afirmaciones es correcta?:",
+      "answers": [
+        "Un sistema operativo que soporta monotarea también soporta tiempo compartido.",
+        "Un sistema operativo que soporta multitarea también soporta tiempo compartido.",
+        "Un sistema operativo que soporta monotarea también soporta multitarea.",
+        "Un sistema operativo que soporta tiempo compartido también soporta multitarea."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 28,
+      "question": "Atendiendo a las diferentes clasificaciones de los Sistemas Operativos ¿cuál de las siguientes afirmaciones es correcta?:",
+      "answers": [
+        "Atendiendo a la utilización de recursos, un SO con multiprocesamiento puede ser apropiativo o no apropiativo.",
+        "Atendiendo al tipo de aplicaciones, los sistemas de propósito general no son construidos para una aplicación específica.",
+        "Atendiendo a la interactividad, los sistemas de propósito especial están realizados para aplicaciones comerciales de gran difusión.",
+        "Atendiendo a la interactividad, puede ser multitarea para maximizar recursos."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 29,
+      "question": "Según la clasificación de los sistemas operativos por interactividad, estos se clasifican en:",
+      "answers": [
+        "Sistemas operativos de tiempo real, tiempo compartido y procesamiento por lotes.",
+        "Sistemas operativos de propósito general y propósito específico.",
+        "Sistemas operativos monoprogramados y multitarea.",
+        "Sistemas operativos monousuario y multiusuario."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 1,
+      "id": 30,
+      "question": "¿En un SO multiprogramado es necesario?:",
+      "answers": [
+        "Que sea de tiempo real.",
+        "Debe ser apropiativo.",
+        "La existencia de más de un procesador.",
+        "Ninguna es correcta."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 31,
+      "question": "¿Cuáles son los 4 enfoques de diseño de sistemas operativos más representativos?:",
+      "answers": [
+        "Monolítico, jerárquico, distribuido y empotrado.",
+        "Estructura monolítica, estructura de capas, microkernel y estructura de objetos.",
+        "Cliente/Servidor, red, tiempo real y por lotes.",
+        "Jerárquico, multitarea, multiprocesador y distribuido."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 32,
+      "question": "El principal objetivo de diseño en un sistema operativo con kernel cliente/servidor es:",
+      "answers": [
+        "Aumentar el rendimiento del hardware.",
+        "Que el kernel proporcione todos los servicios posibles.",
+        "Que el kernel dé el menor número de servicios.",
+        "Eliminar la comunicación entre procesos."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 33,
+      "question": "El objetivo de la multiprogramación por lotes es:",
+      "answers": [
+        "Reducir el tiempo de respuesta.",
+        "Maximizar la utilización del procesador.",
+        "Aumentar la interacción con el usuario.",
+        "Minimizar el uso de memoria."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 34,
+      "question": "En un sistema operativo con procesamiento por lotes, la entidad básica a controlar es:",
+      "answers": ["El usuario.", "La sesión.", "El proceso.", "La tarea."],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 35,
+      "question": "En una estructura Cliente-Servidor:",
+      "answers": [
+        "El núcleo gestiona directamente todos los servicios.",
+        "El núcleo se encarga de establecer la comunicación entre clientes y servidores.",
+        "Los servidores se ejecutan en modo usuario sin comunicación.",
+        "El cliente controla el kernel."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 36,
+      "question": "Durante el desarrollo de los sistemas operativos, ¿Cuántas etapas o generaciones encontramos?:",
+      "answers": [
+        "Tres etapas.",
+        "Cuatro etapas.",
+        "Cinco etapas.",
+        "Depende del autor."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 37,
+      "question": "¿Cuál de los siguientes tipos de SO tiene un mayor grado de abstracción?:",
+      "answers": [
+        "Monolítico.",
+        "Jerárquico.",
+        "Cliente/Servidor.",
+        "Orientado a Objetos."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 38,
+      "question": "Durante la cuarta generación o etapa en la historia de los sistemas operativos, la tecnología en el diseño de los computadores fue:",
+      "answers": [
+        "Transistores.",
+        "Circuitos integrados.",
+        "Microprocesadores.",
+        "Tubo de vacío."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 39,
+      "question": "Un sistema operativo en el que es necesario conocer la localización de los recursos es:",
+      "answers": [
+        "Un sistema operativo distribuido.",
+        "Un sistema operativo centralizado.",
+        "Un sistema operativo de red.",
+        "Un sistema operativo multiprocesador."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 40,
+      "question": "Según la clasificación por tipo de aplicación que se hace de los sistemas operativos, estos se pueden clasificar en:",
+      "answers": [
+        "Sistemas operativos monousuario y sistemas operativos multiusuario.",
+        "Sistemas operativos de tiempo real y sistemas operativos de tiempo compartido.",
+        "Sistemas operativos de propósito general y sistemas operativos de propósito específico.",
+        "Sistemas operativos apropiativos y no apropiativos."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 41,
+      "question": "¿Cuál de las siguientes funciones no la realiza el Sistema Operativo?:",
+      "answers": [
+        "Gestión de la memoria principal.",
+        "Planificación del procesador.",
+        "Comprobar el buen funcionamiento de la CPU.",
+        "Gestión de dispositivos de entrada/salida."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 42,
+      "question": "Indique las categorías en las que se agrupan las distintas funciones que realiza un sistema operativo:",
+      "answers": [
+        "Administración de procesos, gestión de memoria, administración de E/S, gestión de interrupciones.",
+        "Administración de recursos, ejecución de servicios para los programas, ejecución de los mandatos de los usuarios.",
+        "Soporte hardware, interfaz de usuario, control de acceso, planificación de tareas.",
+        "Núcleo del sistema, capa de abstracción, servicios de red, gestión de almacenamiento."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 43,
+      "question": "En el diseño de un sistema operativo se han usado las siguientes estructuras o arquitecturas:",
+      "answers": [
+        "Monolítica, jerárquica, distribuida, multiprocesador.",
+        "Monolítica, jerárquica, cliente/servidor, orientada a objetos.",
+        "Jerárquica, microkernel, virtual, multiprogramada.",
+        "Cliente/servidor, en red, de tiempo real, orientada a procesos."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 44,
+      "question": "El grado de multiprogramación corresponde a:",
+      "answers": [
+        "El número de procesos que pueden ejecutarse simultáneamente en la CPU.",
+        "El número máximo de procesos en memoria principal.",
+        "El número de procesos creados desde el arranque del sistema.",
+        "El número de procesos que se encuentran en estado de ejecución."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 45,
+      "question": "Según la clasificación de los sistemas operativos por interactividad, estos se clasifican en:",
+      "answers": [
+        "Sistemas operativos de tiempo real, sistemas operativos de tiempo compartido y sistemas operativos de procesamiento por lotes.",
+        "Sistemas operativos de propósito general y sistemas operativos de propósito específico.",
+        "Sistemas operativos monoprogramados y sistemas operativos multitarea.",
+        "Sistemas operativos de monousuario y sistemas operativos multiusuario."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 46,
+      "question": "Durante la segunda generación o etapa en la historia de los sistemas operativos:",
+      "answers": [
+        "Aparece la multiprogramación y el tiempo compartido.",
+        "Aparece el procesamiento batch.",
+        "Se desarrollan los sistemas operativos distribuidos.",
+        "Se introducen los sistemas operativos de red."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 47,
+      "question": "Durante la administración de recursos qué acción no realiza el SO:",
+      "answers": [
+        "Asignar recursos hardware a los procesos.",
+        "Controlar el acceso concurrente a los recursos.",
+        "Liberar recursos una vez finalizado su uso.",
+        "Realiza todas las actividades indicadas en el resto de las opciones."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 48,
+      "question": "Durante la tercera generación o etapa en el desarrollo de los sistemas operativos:",
+      "answers": [
+        "Aparece el procesamiento batch.",
+        "Aparece la multiprogramación y el tiempo compartido.",
+        "Se introducen los sistemas operativos distribuidos.",
+        "Se generaliza el uso de microprocesadores."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 49,
+      "question": "En un sistema operativo con macrokernel (monolítico):",
+      "answers": [
+        "Todas las funciones del sistema se ejecutan en modo usuario.",
+        "Se puede adaptar escrupulosamente a cualquier necesidad.",
+        "Existe una separación estricta entre servicios del sistema.",
+        "El núcleo únicamente gestiona la comunicación entre procesos."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 50,
+      "question": "¿Cuál de las siguientes características no la proporciona el sistema operativo?:",
+      "answers": [
+        "Gestión de la memoria principal.",
+        "Planificación del uso del procesador.",
+        "Gestión de dispositivos de entrada/salida.",
+        "Ninguna de las anteriores."
+      ],
+      "correct": 3
+    },
+    {
+      "unit": 1,
+      "id": 51,
+      "question": "Un intérprete de comandos:",
+      "answers": [
+        "Es parte del firmware del sistema.",
+        "Actúa como traductor entre el usuario y el computador.",
+        "Gestiona directamente el hardware del sistema.",
+        "Sustituye a las llamadas al sistema."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 52,
+      "question": "Los sistemas operativos se clasifican atendiendo a los siguientes puntos de vista:",
+      "answers": [
+        "Arquitectura, velocidad y capacidad de almacenamiento.",
+        "Tipo de kernel, sistema de ficheros y planificación.",
+        "Utilización de recursos, interactividad, número de usuarios y tipo de aplicación.",
+        "Número de procesos, memoria disponible y periféricos."
+      ],
+      "correct": 2
+    },
+    {
+      "unit": 1,
+      "id": 53,
+      "question": "Un sistema operativo de tiempo compartido se caracteriza por:",
+      "answers": [
+        "Ejecutar un solo proceso a la vez.",
+        "Todas las respuestas son correctas.",
+        "Procesamiento secuencial sin interrupciones.",
+        "Uso exclusivo por un único usuario."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 54,
+      "question": "En un sistema operativo monoprogramado, el número de programas que se ejecutan a la vez es:",
+      "answers": [
+        "Siempre 1.",
+        "Depende de la memoria disponible.",
+        "Entre 1 y 2 según el tipo de CPU.",
+        "No hay límite, todos los procesos se ejecutan simultáneamente."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 1,
+      "id": 55,
+      "question": "Los sistemas operativos actuales son:",
+      "answers": [
+        "Sistemas operativos de propósito general.",
+        "Sistemas operativos de propósito especial.",
+        "Sistemas operativos de tiempo real únicamente.",
+        "Sistemas operativos monoprogramados."
+      ],
+      "correct": 0
+    },
+    {
+      "unit": 1,
+      "id": 56,
+      "question": "El SO proporciona una visión extendida de la computadora mediante:",
+      "answers": [
+        "La memoria virtual.",
+        "Las llamadas al sistema.",
+        "El hardware exclusivo.",
+        "La consola de usuario."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 57,
+      "question": "En una gestión no apropiativa del procesador:",
+      "answers": [
+        "El SO puede quitar el procesador al programa que se está ejecutando si llega un proceso de mayor prioridad.",
+        "El SO no puede quitar el procesador al programa que se está ejecutando.",
+        "Un programa en ejecución puede ceder voluntariamente el procesador, pero el SO no lo expulsa.",
+        "Se requiere siempre la existencia de un mecanismo de reloj para expropiar la CPU."
+      ],
+      "correct": 1
+    },
+    {
+      "unit": 1,
+      "id": 58,
+      "question": "Según la clasificación de los sistemas operativos por el número de usuarios, estos se pueden clasificar en:",
+      "answers": [
+        "Sistemas operativos monoprogramados y multiprogramados.",
+        "Sistemas operativos de propósito general y de propósito específico.",
+        "Sistemas operativos de monousuario y sistemas operativos multiusuario.",
+        "Sistemas operativos de tiempo compartido y en lote."
+      ],
+      "correct": 2
+    }
+  ]
+}

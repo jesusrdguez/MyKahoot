@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Kahoot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+    <div id="startScreen">
+      <h1>Mini Kahoot</h1>
+      <div style="display:flex; gap:12px; justify-content:center; align-items:center; margin:12px 0">
+        <label style="font-weight:700">Tema:</label>
+        <label><input type="radio" name="theme" value="1" checked> Tema 1</label>
+        <label><input type="radio" name="theme" value="2"> Tema 2</label>
+        <label><input type="radio" name="theme" value="3"> Tema 3</label>
+        <label><input type="radio" name="theme" value="4"> Tema 4</label>
+        <label><input type="radio" name="theme" value="5"> Tema 5</label>
+        <label><input type="radio" name="theme" value="mix"> Mix</label>
+      </div>
+      <div style="display:flex; justify-content:center; gap:8px; margin-bottom:12px;">
+        <button id="shuffleBtn" class="skip-btn">Barajar Preguntas</button>
+      </div>
+      <div id="shuffleQuestionsControl" style="display:flex; justify-content:center; gap:8px; margin-bottom:12px;">
+        <label style="font-weight:600"><input id="shuffleQuestionsChk" type="checkbox"> Mezclar orden de preguntas</label>
+      </div>
+      <div id="mixControls" style="display:none; justify-content:center; gap:8px; margin-bottom:8px;">
+        <label>Número de preguntas: <input id="mixCount" type="number" min="1" value="10" style="width:88px"></label>
+        <small style="color:var(--muted); align-self:center">(cantidad a tomar del combinado de los temas seleccionados)</small>
+      </div>
+      <button id="startBtn" class="start-btn" onclick="startGame()" disabled>Iniciar</button>
+      <button id="openEditorBtn" class="start-btn" style="margin-top:8px; background:#64748b;">Editor de preguntas</button>
+    </div>
+
+    <div id="editorScreen" class="hidden">
+      <h1>Editor de preguntas</h1>
+      <div style="display:flex; gap:12px; justify-content:center; align-items:center; margin:12px 0">
+        <label style="font-weight:700">Tema:</label>
+        <label><input type="radio" name="editorTheme" value="1" checked> Tema 1</label>
+        <label><input type="radio" name="editorTheme" value="2"> Tema 2</label>
+        <label><input type="radio" name="editorTheme" value="3"> Tema 3</label>
+        <label><input type="radio" name="editorTheme" value="4"> Tema 4</label>
+        <label><input type="radio" name="editorTheme" value="5"> Tema 5</label>
+      </div>
+      <div style="display:flex; justify-content:center; gap:8px; margin-bottom:12px;">
+        <button id="editToggleBtn" class="skip-btn">Editar</button>
+        <button id="saveEditsBtn" class="start-btn hidden">Guardar</button>
+        <button id="cancelEditsBtn" class="skip-btn hidden">Cancelar</button>
+        <button id="resetThemeBtn" class="skip-btn">Resetear tema</button>
+        <button id="resetAllBtn" class="skip-btn">Resetear todos</button>
+        <button id="exportBtn" class="start-btn">Exportar JSON</button>
+      </div>
+      <div id="editorList" style="max-height:480px; overflow:auto; padding:8px; border-radius:8px; border:1px solid rgba(0,0,0,0.06);"></div>
+      <div style="display:flex; justify-content:center; gap:8px; margin-top:12px;">
+        <button id="closeEditorBtn" class="start-btn" style="background:#64748b">Cerrar editor</button>
+      </div>
+    </div>
+
+    <div id="quizScreen" class="hidden">
+      <div class="quiz-header">
+        <div class="quiz-controls">
+          <button id="prevBtn" class="skip-btn hidden" onclick="prevQuestion()">Anterior</button>
+          <button id="skipBtn" class="skip-btn hidden" onclick="skipQuestion()">Saltar</button>
+          <button id="quitBtn" class="quit-btn hidden" onclick="endAttempt()">Terminar intento</button>
+        </div>
+      </div>
+      <div id="questionBanner" class="question-banner hidden"><h2 id="bannerQuestion"></h2></div>
+      <div class="answers" id="answers"></div>
+      <div style="display:flex; justify-content:center; gap:16px; margin-top:12px;">
+        <div>✅ Correctas: <strong id="correctCount">0</strong></div>
+        <div>❌ Incorrectas: <strong id="wrongCount">0</strong></div>
+        <!-- <div>➖ No contestadas: <strong id="unansweredCount">0</strong></div> -->
+      </div>
+      <div class="footer">
+        Pregunta <span id="current"></span> / <span id="total"></span>
+      </div>
+    </div>
+
+    <div id="endScreen" class="hidden">
+      <h1>¡Juego terminado!</h1>
+      <h2>Puntuación: <span id="score"></span></h2>
+      <div style="display:flex; justify-content:center; gap:16px; margin:16px 0;">
+        <div>✅ Correctas: <strong id="correctFinal">0</strong></div>
+        <div>❌ Incorrectas: <strong id="wrongFinal">0</strong></div>
+        <div>➖ No contestadas: <strong id="unansweredFinal">0</strong></div>
+      </div>
+      <button class="start-btn" onclick="restart()">Reiniciar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

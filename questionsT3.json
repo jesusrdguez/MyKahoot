@@ -1,0 +1,566 @@
+{
+  "title": "Tema 3 - Memoria",
+  "questions": [
+    {
+      "question": "Tenemos un sistema con paginación bajo demanda pura. Podemos decir respecto al número de páginas cargadas en memoria que:",
+      "answers": [
+        "Ninguna de la anteriores.",
+        "Es igual al conjunto de trabajo.",
+        "Mayor que el conjunto de trabajo.",
+        "Menor que el conjunto de trabajo."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "La Paginación sufre:",
+      "answers": [
+        "De fragmentación externa e interna.",
+        "De fragmentación interna.",
+        "Ninguna de las anteriores.",
+        "De fragmentación externa."
+      ],
+      "correct": 1,
+      "unit": 3
+    },
+    {
+      "question": "En el algoritmo peor en ajustarse, Worst Fit, para la selección de un área libre de memoria asigna se elige:",
+      "answers": [
+        "El bloque libre más grande, siempre que el tamaño del bloque exceda el tamaño necesario.",
+        "Ninguna de las anteriores.",
+        "El primer bloque libre suficientemente grande que encuentra.",
+        "El bloque libre más grande, siempre que el tamaño del bloque no exceda el tamaño necesario."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "El espacio de direcciones virtuales de un proceso comienza en la dirección 0x0000 y termina en la 0xFAFC. Si el proceso genera la dirección virtual 0xCFFF, podemos decir que esta dirección...",
+      "answers": [
+        "Será correcta si la memoria física tiene, al menos, 0xCFFF direcciones.",
+        "No podemos decir nada porque no sabemos la correspondencia entre la dirección virtual y la dirección física.",
+        "Será correcta si la memoria física tiene, al menos, 0xFAFC direcciones.",
+        "Es válida."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "¿Cuál es la página que se sustituirá en el algoritmo de sustitución “óptimo” ?:",
+      "answers": [
+        "La siguiente que se va a utilizar.",
+        "La que tardará más en volverse a utilizar.",
+        "La utilizada menos frecuentemente.",
+        "La que se utilizó la última vez."
+      ],
+      "correct": 1,
+      "unit": 3
+    },
+    {
+      "question": "En un sistema con gestión de memoria basada en segmentación paginada, ¿cuántos fallos de página provocará un proceso cuando se cargue en memoria si ocupa 2 segmentos completos? Nota: cada segmento ocupa como máximo 2 páginas:",
+      "answers": [
+        "4.",
+        "2.",
+        "Ninguna de las anteriores.",
+        "Entre 2 y 4."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "¿Cuál de estas técnicas de gestión de memoria no padece fragmentación interna?:",
+      "answers": [
+        "Particiones múltiples de tamaño fijo (MFT).",
+        "Paginación.",
+        "Todas las anteriores padecen algún tipo de fragmentación interna.",
+        "Segmentación."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "La tabla de páginas indica que la página 2 tiene asociado el marco de número 3. El tamaño de la página es de 1Kb. ¿Cuál es la dirección física para la dirección virtual (2, 326) dada en el formato? (no pág., desplazamiento en la pág.):",
+      "answers": [
+        "Se necesita conocer el tamaño del marco.",
+        "1×1024+326.",
+        "3+326.",
+        "3×1024+326."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "La generación de direcciones físicas en un sistema de memoria segmentada le corresponde a este componente:",
+      "answers": [
+        "El enlazador.",
+        "El cargador.",
+        "La MMU.",
+        "El compilador."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "Para una dirección lógica con el formato [número de segmento (2bits), número de página (16bits), desplazamiento de 6 bits]:",
+      "answers": [
+        "El número de páginas por segmento es 2^16 pero el tamaño de la página depende del tamaño del segmento.",
+        "El número de páginas por segmento es de 2^18 y el tamaño de la página de 2^8 bytes.",
+        "El número de páginas totales es de 2^18 pero el tamaño de la página depende del tamaño del segmento.",
+        "El número de segmentos totales es de 2^2 y el tamaño máximo del segmento es de 2^24 bytes."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "Con la llegada de la reubicación dinámica se consigue...",
+      "answers": [
+        "Que los programas no tengan que estar enteros en memoria a lo largo de su ejecución.",
+        "La multiprogramación.",
+        "Que los programas no estén contiguos en memoria durante su ejecución.",
+        "La movilidad de los programas en la memoria a lo largo de su ejecución."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "Para una dirección lógica de 32 bits con el formato [número de pág. (22bits), desplazamiento de la pág. (10 bits)]:",
+      "answers": [
+        "El número de páginas totales es de 2^22 pero el tamaño de la página depende del marco de página.",
+        "El número de páginas totales es de 2^32 pero el tamaño de la página depende del marco de página.",
+        "El número de páginas totales es de 2^22 y el tamaño de la página de 2^10 bytes.",
+        "El número de páginas totales es de 22 y el tamaño de la página es de 10 bytes."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "Si usamos particiones de tamaño fijo:",
+      "answers": [
+        "Controlamos las particiones con la tabla de descripción de particiones.",
+        "No se puede producir fragmentación interna.",
+        "El proceso debe dividirse en trozos del mismo tamaño.",
+        "El grado de multiprogramación usando swapping no puede superar el nº de particiones."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "Si tenemos un working set con un periodo s=5 y en los últimos 5 instantes de tiempo hubo 4 fallos de página:",
+      "answers": [
+        "No podemos saber cuánto vale el working set.",
+        "El working set vale 0.",
+        "El working set vale 5.",
+        "El working set vale 4."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "En particiones variables...",
+      "answers": [
+        "Hay fragmentación externa.",
+        "Si hay interna no puede haber externa.",
+        "Hay fragmentación interna y externa.",
+        "Hay fragmentación interna."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "¿Cuál de las siguientes técnicas es más adecuada para tratar el problema de la hiperpaginación?:",
+      "answers": [
+        "La técnica basada en el control de la frecuencia de fallos de páginas.",
+        "La asignación global.",
+        "Ninguna de las anteriores.",
+        "La técnica consistente en asignar a cada proceso una cantidad de marcos de página proporcional al tamaño de su espacio direccionable."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "En un sistema con segmentación paginada, el número de fallos de página:",
+      "answers": [
+        "Es siempre 0.",
+        "Dependerá del conjunto de trabajo.",
+        "Es proporcional al número de segmentos.",
+        "Se incrementará con el número de procesos."
+      ],
+      "correct": 1,
+      "unit": 3
+    },
+    {
+      "question": "Tenemos dos sistemas, uno usa particiones fijas y el otro, particiones variables. Si la cola de procesos esperando es:\ny queda libre una partición de 30 Kb y ambos sistemas usan Best Fit:",
+      "answers": [
+        "El sistema de particiones fijas asignará el proceso A a la partición.",
+        "Las respuestas (a) y (b) son correctas.",
+        "Las respuestas (a) y (b) son incorrectas.",
+        "El sistema de particiones variables asignará el proceso A a la partición."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "El algoritmo óptimo de sustitución de páginas en la gestión de la memoria virtual debe:",
+      "answers": [
+        "Sustituir aquella página cuyo bit de referenciado esté a 0.",
+        "Sustituir aquella página que lleve más tiempo en memoria.",
+        "Sustituir aquella página que menos se ha usado últimamente.",
+        "Sustituir aquella página que tardará más en volverse a utilizar."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "Suponga la función matemática f(M) que devuelve el número de fallos de página de una política, dada el número M de marco de página disponibles. A medida que M aumenta, la pendiente de f(M)...",
+      "answers": [
+        "Disminuye.",
+        "Aumenta.",
+        "Permanece.",
+        "Tiende a infinito."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "Una librería dinámica se carga en memoria...",
+      "answers": [
+        "Cuando el programa invoca a alguno de los métodos contenidos en ella.",
+        "Cuando se compila el programa que la usa.",
+        "Cuando se carga el programa que la usa.",
+        "Cuando se ejecuta el programa que la usa."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "En la tabla de segmentos se encuentra que el segmento 0 tiene una base de 219 y una longitud de 600. ¿A qué dirección física se corresponde la dirección virtual (0, 430) dada en el formato? (no seg., desplazamiento dentro del seg.):",
+      "answers": [
+        "219+430=649 > 600 ⇒ Error de direccionamiento.",
+        "Es necesario conocer el tamaño del marco.",
+        "219×0+430=430.",
+        "219+430=649."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "¿Cuál de estas políticas de reemplazo de páginas es menos costosa de implementar?:",
+      "answers": [
+        "LRU.",
+        "Óptima.",
+        "FIFO.",
+        "Algoritmo del reloj."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "La compactación de memoria es necesaria en un esquema de gestión de memoria:",
+      "answers": [
+        "De paginación.",
+        "De particiones variables.",
+        "De particiones fijas.",
+        "Ninguna de las anteriores."
+      ],
+      "correct": 1,
+      "unit": 3
+    },
+    {
+      "question": "En paginación bajo demanda pura...",
+      "answers": [
+        "Tendremos tantas tramas como indique el conjunto de trabajo.",
+        "Cada referencia supone un fallo de página.",
+        "Ninguna de las anteriores.",
+        "Inicialmente habrá tantos fallos de página como tramas tenga asignado el proceso."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "Supongamos un sistema en el que la memoria posee las siguientes particiones fijas libres: 1000 Kb, 400 Kb, 1800 Kb, 700 Kb, 900 Kb, 1200 Kb y 1500 Kb. Estas particiones están disponibles en el orden dado. Se requieren las siguientes peticiones de tamaño: 1200 Kb, 1000 Kb y 900 Kb. Si se usa el algoritmo siguiente en ajuste, ¿cuál es el total de fragmentación externa e interna resultante?:",
+      "answers": [
+        "Fragmentación interna: 0, Fragmentación externa: 1400.",
+        "Fragmentación interna: 0, Fragmentación externa: 0.",
+        "Fragmentación interna: 1400, Fragmentación externa: 0.",
+        "Fragmentación interna: 700, Fragmentación externa: 700."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "Si un sistema utiliza memoria virtual paginada y un proceso puede comenzar su ejecución sin tener ninguna página en memoria se habla de:",
+      "answers": [
+        "Sistema de paginación de estado suspendido.",
+        "Sistema de paginación previa.",
+        "Sistema de paginación por demanda pura.",
+        "Sistema de paginación con conjunto inicial de páginas vacío."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "Cuál de las siguientes afirmaciones es correcta:",
+      "answers": [
+        "Siempre que se produce un fallo de página se generan dos operaciones de acceso la memoria secundaria, una para guardar la página a expulsar y otra para cargar la página referida.",
+        "Según el modelo del conjunto de trabajo, las referencias de los programas no tienden a agruparse por fases.",
+        "Ninguna de las otras respuestas es correcta.",
+        "La página que se sustituye con el algoritmo del reloj o segunda oportunidad es la que lleva más tiempo en memoria."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "La anomalía de Belady consiste en que:",
+      "answers": [
+        "Al disminuir el tamaño de las páginas, aumentan los fallos de página.",
+        "Al aumentar el grado de multiprogramación aumentan los fallos de página.",
+        "Al aumentar el número de marcos de página para asignación, aumentan los fallos de página.",
+        "Al disminuir el número de marcos de página para asignación, aumentan los fallos de página."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "Si tenemos cargadas en memoria las páginas 1,2 y 3 y sabemos que la página 1 se referenció en el instante 0 y 3, la 2 en el 1, y la 3 en el 2, que página se reemplazaría si se usa la técnica de envejecimiento de 4 bits:",
+      "answers": [
+        "La 3.",
+        "O la 2 o la 3.",
+        "La 1.",
+        "La 2."
+      ],
+      "correct": 1,
+      "unit": 3
+    },
+    {
+      "question": "Diga cuál de las siguientes afirmaciones relativas al algoritmo de sustitución de páginas de uso no frecuentes, NFU, son ciertas:",
+      "answers": [
+        "Las afirmaciones a y b son falsas.",
+        "Las afirmaciones a y b son ciertas.",
+        "Este algoritmo posee una tasa de fallos mayor que el algoritmo de la segunda oportunidad (algoritmo del reloj).",
+        "Este algoritmo posee una tasa de fallos mayor que el algoritmo LRU."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "El término reubicable se refiere a:",
+      "answers": [
+        "La posibilidad de cargar y ejecutar un programa dado en un lugar arbitrario de memoria.",
+        "La posibilidad de colocar los archivos en cualquier sector del disco.",
+        "La posibilidad de ejecutar un programa en cualquier momento.",
+        "La posibilidad de que los datos se carguen en cualquier lugar."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "El modelo de Memoria virtual no resulta interesante implementarlo con:",
+      "answers": [
+        "Paginación.",
+        "Ninguna de las anteriores.",
+        "Segmentación paginada.",
+        "Segmentación."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "Se denomina intercambio o swapping:",
+      "answers": [
+        "La aplicación de cualquier algoritmo de sustitución de páginas cuando se produce un fallo de página.",
+        "El hecho de que una tarea reemplace a otra en el estado de ejecución de acuerdo con el planificador a corto plazo.",
+        "El hecho de que una tarea reemplace a otra en el estado de ejecución siguiendo una estrategia de expropiación.",
+        "El hecho de salvar una tarea suspendida en memoria secundaria."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "El TLB se usa en:",
+      "answers": [
+        "Segmentación.",
+        "Particiones.",
+        "Paginación.",
+        "Ninguna de las anteriores."
+      ],
+      "correct": 2,
+      "unit": 3
+    },
+    {
+      "question": "Dada la siguiente secuencia de referencias: 8, 1, 2, 3, 1, 4, 1. Si se disponen de tres marcos de página (inicialmente vacíos) y se utiliza la política de reemplazo LRU ¿Cuántos fallos de páginas se producirán al resolver todas las referencias de la secuencia?:",
+      "answers": [
+        "6.",
+        "3.",
+        "5.",
+        "7."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "Si usamos gestión de memoria basada en particiones variables para gestionar una memoria de 6 MB y tenemos un espacio libre contiguo de 3 MB y llega un proceso de 4 MB la fragmentación externa vale:",
+      "answers": [
+        "6 Mb.",
+        "0.",
+        "3 Mb.",
+        "4 Mb."
+      ],
+      "correct": 1,
+      "unit": 3
+    },
+    {
+      "question": "El algoritmo de asignación de memoria peor en ajustarse consiste en que el gestor de memoria asigna al proceso entrante:",
+      "answers": [
+        "El bloque libre más pequeño suficientemente grande para contener al proceso.",
+        "Todos los bloques libres que quedan, independientemente de sus tamaños.",
+        "El primer bloque libre suficientemente grande, aunque sea el peor.",
+        "El bloque más grande, siempre que el tamaño del bloque exceda al tamaño necesario."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "¿Cuál de los siguientes no es un ejemplo de sistema de gestión de memoria virtual?:",
+      "answers": [
+        "Partición dinámica.",
+        "Paginación.",
+        "Paginación/segmentación.",
+        "Segmentación."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "Diga cuál de las siguientes afirmaciones relativas al algoritmo de sustitución de páginas de uso no frecuentes, NRU, son ciertas:",
+      "answers": [
+        "Las afirmaciones a y b son falsas.",
+        "Las afirmaciones a y b son ciertas.",
+        "Este algoritmo posee una tasa de fallos mayor que el algoritmo de la segunda oportunidad (algoritmo del reloj).",
+        "Este algoritmo posee una tasa de fallos mayor que el algoritmo LRU."
+      ],
+      "correct": 3,
+      "unit": 3
+    },
+    {
+      "question": "La memoria virtual corresponde a un esquema de gestión de memoria que:",
+      "answers": [
+        "Permite la ejecución de procesos parcialmente cargados en memoria.",
+        "Obliga a que todo el proceso esté residente en memoria principal.",
+        "Elimina la necesidad de memoria secundaria.",
+        "Impide la multiprogramación."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "¿Qué relación en bits hay entre una dirección lógica y una física en memoria virtual?:",
+      "answers": [
+        "La dirección lógica es siempre mayor o igual que la física.",
+        "La dirección física es siempre mayor que la lógica.",
+        "Ambas direcciones tienen siempre el mismo tamaño en bits.",
+        "La relación depende del tamaño de página y del marco."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "En un sistema operativo multitarea con 1 Mbytes de memoria virtual, 16 Kbytes de espacio lógico de los procesos, páginas de 512 bytes y 32 Kbytes de memoria física, la dirección física está formada por:",
+      "answers": [
+        "5 bits para indicar el marco y 10 bits para el desplazamiento.",
+        "6 bits para indicar el marco y 9 bits para el desplazamiento.",
+        "7 bits para indicar el marco y 8 bits para el desplazamiento.",
+        "8 bits para indicar el marco y 9 bits para el desplazamiento."
+      ],
+      "correct": 1,
+      "unit": 3
+    },
+    {
+      "question": "En un sistema con gestión de memoria de particiones fijas de tamaño 500 Kb, si se aloja un proceso de 450 Kb:",
+      "answers": [
+        "Se produce una fragmentación interna de 50 Kb.",
+        "Se produce fragmentación externa de 50 Kb.",
+        "No se produce fragmentación.",
+        "Se produce fragmentación interna y externa."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "Considerando que la memoria principal está compuesta por cuatro marcos de página y que un proceso se ha dividido en 8 páginas (numeradas de 0 a 7), con la siguiente cadena de referencia: 0 1 7 2 3 2 7 1 3 ¿Cuántos fallos de página ocurrirán utilizando el algoritmo FIFO si los cuatro marcos de página están vacíos al inicio?:",
+      "answers": [
+        "5.",
+        "4.",
+        "6.",
+        "7."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "¿Qué modelos retrasan la traducción de direcciones hasta la ejecución?:",
+      "answers": [
+        "Paginación, segmentación y segmentación paginada.",
+        "Sólo paginación.",
+        "Sólo segmentación.",
+        "Ninguna de las anteriores."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "¿Cuál de las siguientes afirmaciones es falsa si tenemos memoria virtual?:",
+      "answers": [
+        "Es obligatorio el bit de modificada.",
+        "Es obligatorio el uso de memoria secundaria.",
+        "Es necesaria una MMU.",
+        "Puede ejecutarse un proceso parcialmente cargado."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "La principal ventaja de la Memoria Virtual es:",
+      "answers": [
+        "Cargar programas con un espacio lógico de direcciones mayor que el físico.",
+        "Eliminar completamente los fallos de página.",
+        "Evitar el uso de memoria secundaria.",
+        "Aumentar la velocidad de ejecución de los procesos."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "Supongamos un sistema de gestión de memoria virtual con paginación, en el que se utiliza como algoritmo de reemplazo el LRU. Existe un proceso al que se le asignan 4 marcos durante toda su ejecución y que hace referencia a la siguiente lista de páginas: 4 8 9 7 3 8 4 8 4 6 8:",
+      "answers": [
+        "Se producen 2 fallos de página aparte de los iniciales.",
+        "Se producen 3 fallos de página aparte de los iniciales.",
+        "Se producen 4 fallos de página aparte de los iniciales.",
+        "Se producen 5 fallos de página aparte de los iniciales."
+      ],
+      "correct": 1,
+      "unit": 3
+    },
+    {
+      "question": "Con el sistema / esquema de gestión de memoria mediante particiones fijas se produce:",
+      "answers": [
+        "Fragmentación interna.",
+        "Fragmentación externa.",
+        "Ningún tipo de fragmentación.",
+        "Fragmentación interna y externa."
+      ],
+      "correct": 0,
+      "unit": 3
+    },
+    {
+      "question": "Puede aparecer fragmentación externa en:",
+      "answers": [
+        "Segmentación.",
+        "Paginación.",
+        "Particiones fijas.",
+        "Ninguna de las anteriores."
+      ],
+      "correct": 0,
+      "unit": 3
+    }
+  ]
+}
