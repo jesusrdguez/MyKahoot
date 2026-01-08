@@ -13,11 +13,9 @@ let selectedAnswers = [];
 let shuffleAnswers = false;
 let answerOrders = [];
 
-// Editor state (moved to global scope so editor functions can access them)
 let editorTheme = '1';
 let editing = false;
-let editorWorkingCopy = null; // copy of questions for editing
-
+let editorWorkingCopy = null
 document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('startBtn');
   const themeToggle = document.getElementById('themeToggle');
@@ -32,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetThemeBtn = document.getElementById('resetThemeBtn');
   const resetAllBtn = document.getElementById('resetAllBtn');
   const exportBtn = document.getElementById('exportBtn');
+  const importBtn = document.getElementById('importBtn');
 
   
 
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtn.textContent = 'Cargando preguntas...';
     const sbtn = document.getElementById('shuffleBtn');
     if (sbtn) {
-      sbtn.textContent = 'Barajar Preguntas: ' + (shuffleAnswers ? 'ON' : 'OFF');
+      sbtn.textContent = 'Barajar Respuestas: ' + (shuffleAnswers ? 'ON' : 'OFF');
       sbtn.setAttribute('aria-pressed', String(shuffleAnswers));
       sbtn.addEventListener('click', toggleShuffle);
     }
@@ -88,14 +87,52 @@ document.addEventListener('DOMContentLoaded', () => {
   if (resetThemeBtn) resetThemeBtn.addEventListener('click', () => { resetThemeEdits(editorTheme); });
   if (resetAllBtn) resetAllBtn.addEventListener('click', () => { resetAllEdits(); });
   if (exportBtn) exportBtn.addEventListener('click', () => { exportThemeJSON(editorTheme); });
+  if (importBtn) {
+    let importFileInput = null;
+    importBtn.addEventListener('click', () => {
+      if (!importFileInput) {
+        importFileInput = document.createElement('input');
+        importFileInput.type = 'file';
+        importFileInput.accept = '.json,application/json';
+        importFileInput.style.display = 'none';
+        importFileInput.addEventListener('change', (e) => {
+          const f = e.target.files && e.target.files[0];
+          if (!f) return;
+          const reader = new FileReader();
+          reader.onload = () => {
+            try {
+              const parsed = JSON.parse(reader.result);
+              if (!parsed || !Array.isArray(parsed.questions)) {
+                alert('JSON inválido: debe contener un objeto con un array "questions"');
+                return;
+              }
+              kahootDataMap[editorTheme] = kahootDataMap[editorTheme] || { title: parsed.title || '', questions: [] };
+              kahootDataMap[editorTheme].questions = parsed.questions;
+              try { localStorage.setItem('kahoot_edits_theme_' + editorTheme, JSON.stringify({ title: parsed.title || kahootDataMap[editorTheme].title || '', questions: parsed.questions })); } catch(e) { console.warn('No se pudo guardar en localStorage', e); }
+              if (editing) {
+                try { editorWorkingCopy = JSON.parse(JSON.stringify(parsed.questions)); } catch(e) { editorWorkingCopy = parsed.questions.slice(); }
+              }
+              renderEditor(editorTheme);
+              alert('Importación completada correctamente.');
+            } catch(err) {
+              console.error('Error parsing import JSON', err);
+              alert('No se pudo parsear el JSON: ' + (err && err.message ? err.message : 'error desconocido'));
+            }
+          };
+          reader.readAsText(f);
+        });
+        document.body.appendChild(importFileInput);
+      }
+      importFileInput.value = null;
+      importFileInput.click();
+    });
+  }
 
   const files = { '1': 'questions.json', '2': 'questionsT2.json', '3': 'questionsT3.json', '4': 'questionsT4.json' };
-  // include tema 5
   files['5'] = 'questionsT5.json';
   function checkStartEnabled() {
     const sel = document.querySelector('input[name="theme"]:checked')?.value || '1';
     if (sel === 'mix') {
-      // mix requires all themes loaded
       if (kahootLoaded['1'] && kahootLoaded['2'] && kahootLoaded['3'] && kahootLoaded['4'] && kahootLoaded['5']) {
         startBtn.disabled = false;
         startBtn.textContent = 'Iniciar (Mix)';
@@ -132,18 +169,15 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch(e) { console.warn('No se pudo añadir tema/unit:', e); }
       kahootDataMap[key] = data;
       kahootLoaded[key] = true;
-      // apply any saved edits from localStorage
       try {
         const saved = localStorage.getItem('kahoot_edits_theme_' + key);
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed && Array.isArray(parsed.questions)) {
-            // override questions with saved version
             kahootDataMap[key].questions = parsed.questions;
           }
         }
       } catch(e) { console.warn('No se pudo aplicar edits guardados', e); }
-      // update mix bounds when each file loads
       try { updateMixBounds(); } catch(e){}
       checkStartEnabled();
     }).catch(err => {
@@ -165,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const origCheck = checkStartEnabled;
   const wrapped = () => { origCheck(); updateMixBounds(); };
   document.querySelectorAll('input[name="theme"]').forEach(r => r.addEventListener('change', wrapped));
-  // also update editor when underlying theme selection changes
   document.querySelectorAll('input[name="editorTheme"]').forEach(r => r.addEventListener('change', () => renderEditor(editorTheme)));
 });
 
@@ -186,10 +219,13 @@ function toggleEditorButtons() {
 }
 
 function prepareEdit() {
-  // create working copy from kahootDataMap
   const base = kahootDataMap[editorTheme];
   if (!base || !Array.isArray(base.questions)) return;
-  editorWorkingCopy = base.questions.map(q => Object.assign({}, q));
+  try {
+    editorWorkingCopy = JSON.parse(JSON.stringify(base.questions));
+  } catch (e) {
+    editorWorkingCopy = base.questions.map(q => Object.assign({}, q));
+  }
   editing = true;
   toggleEditorButtons();
   renderEditor(editorTheme, true);
@@ -201,11 +237,39 @@ function renderEditor(theme, inEditMode = false) {
   container.innerHTML = '';
   const data = (inEditMode && editorWorkingCopy) ? { questions: editorWorkingCopy } : kahootDataMap[theme] || { questions: [] };
   const qs = data.questions || [];
+  if (inEditMode && editing) {
+    const addRowTop = document.createElement('div');
+    addRowTop.style.display = 'flex';
+    addRowTop.style.justifyContent = 'center';
+    addRowTop.style.margin = '8px 0';
+    const addBtnTop = document.createElement('button');
+    addBtnTop.textContent = 'Añadir pregunta';
+    addBtnTop.className = 'start-btn';
+    addBtnTop.addEventListener('click', () => { addNewQuestion(); });
+    addRowTop.appendChild(addBtnTop);
+    container.appendChild(addRowTop);
+  }
+
   qs.forEach((q, qi) => {
     const qDiv = document.createElement('div');
     qDiv.style.borderBottom = '1px solid rgba(0,0,0,0.04)';
     qDiv.style.padding = '8px';
     if (inEditMode && editing) {
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'Eliminar';
+      delBtn.style.background = '#ef4444';
+      delBtn.style.color = '#fff';
+      delBtn.style.border = 'none';
+      delBtn.style.padding = '6px 8px';
+      delBtn.style.borderRadius = '6px';
+      delBtn.style.cursor = 'pointer';
+      const headerRow = document.createElement('div');
+      headerRow.style.display = 'flex';
+      headerRow.style.justifyContent = 'flex-end';
+      headerRow.style.marginBottom = '6px';
+      delBtn.addEventListener('click', (ev) => { ev.stopPropagation(); deleteQuestion(qi); });
+      headerRow.appendChild(delBtn);
+      qDiv.appendChild(headerRow);
       const qInput = document.createElement('input');
       qInput.type = 'text';
       qInput.value = editorWorkingCopy[qi].question || q.question || '';
@@ -274,6 +338,28 @@ function renderEditor(theme, inEditMode = false) {
     }
     container.appendChild(qDiv);
   });
+
+  
+}
+
+function addNewQuestion() {
+  if (!editorWorkingCopy) editorWorkingCopy = [];
+  const newQ = {
+    question: 'Nueva pregunta',
+    answers: ['Respuesta 1', 'Respuesta 2', 'Respuesta 3', 'Respuesta 4'],
+    correct: 0,
+    tema: Number(editorTheme)
+  };
+  editorWorkingCopy.unshift(newQ);
+  renderEditor(editorTheme, true);
+}
+
+
+function deleteQuestion(index) {
+  if (!editorWorkingCopy || index < 0 || index >= editorWorkingCopy.length) return;
+  if (!confirm('¿Eliminar esta pregunta?')) return;
+  editorWorkingCopy.splice(index, 1);
+  renderEditor(editorTheme, true);
 }
 
 function saveEdits() {
@@ -281,7 +367,6 @@ function saveEdits() {
   const payload = { title: kahootDataMap[editorTheme]?.title || '', questions: editorWorkingCopy };
   try {
     localStorage.setItem('kahoot_edits_theme_' + editorTheme, JSON.stringify(payload));
-    // apply to in-memory map
     kahootDataMap[editorTheme].questions = editorWorkingCopy.map(q => Object.assign({}, q));
     editing = false;
     toggleEditorButtons();
@@ -297,7 +382,6 @@ function resetThemeEdits(theme) {
   if (!confirm('¿Resetear los cambios de este tema a su estado original?')) return;
   try {
     localStorage.removeItem('kahoot_edits_theme_' + theme);
-    // reload original file by re-fetching
     const fileMap = { '1': 'questions.json', '2': 'questionsT2.json', '3': 'questionsT3.json', '4': 'questionsT4.json' };
     fetch(fileMap[theme]).then(r => r.json()).then(data => {
       kahootDataMap[theme] = data;
@@ -312,7 +396,6 @@ function resetAllEdits() {
   if (!confirm('¿Resetear todos los cambios de todos los temas?')) return;
   try {
     ['1','2','3','4'].forEach(k => localStorage.removeItem('kahoot_edits_theme_' + k));
-    // reload all files
     const fileMap = { '1': 'questions.json', '2': 'questionsT2.json', '3': 'questionsT3.json', '4': 'questionsT4.json' };
     Object.keys(fileMap).forEach(k => {
       fetch(fileMap[k]).then(r => r.json()).then(data => { kahootDataMap[k] = data; kahootLoaded[k] = true; }).catch(()=>{});
@@ -358,7 +441,7 @@ function startGame() {
   } else {
     const base = kahootDataMap[sel];
     if (!base || !Array.isArray(base.questions)) {
-      kahootData = base; // will be caught by the check below
+      kahootData = base;
     } else {
       const copied = base.questions.map(q => Object.assign({}, q));
       const shuffleQ = document.getElementById('shuffleQuestionsChk')?.checked;
@@ -414,7 +497,6 @@ function showQuestion() {
   document.getElementById('current').textContent = currentQuestion + 1;
 
   const answersDiv = document.getElementById('answers');
-  // determine order for this question (displayedIndex -> originalIndex)
   let order = null;
   const n = q.answers.length;
   if (shuffleAnswers) {
@@ -439,7 +521,7 @@ function showQuestion() {
   }
 
   const prevState = questionStates[currentQuestion];
-  const prevSelected = selectedAnswers[currentQuestion]; // stored as originalIndex
+  const prevSelected = selectedAnswers[currentQuestion];
   const answerEls = answersDiv.querySelectorAll('.answer');
 
   const displayedCorrect = order ? order.indexOf(q.correct) : q.correct;
@@ -472,7 +554,7 @@ function selectAnswer(element, index) {
   locked = true;
   const q = kahootData.questions[currentQuestion];
   const answers = document.querySelectorAll('.answer');
-  const order = answerOrders[currentQuestion] || null; // displayed -> original
+  const order = answerOrders[currentQuestion] || null;
 
   const prevState = questionStates[currentQuestion];
   const prevSelected = selectedAnswers[currentQuestion];
@@ -578,8 +660,8 @@ function endAttempt() {
 function toggleShuffle() {
   shuffleAnswers = !shuffleAnswers;
   const btn = document.getElementById('shuffleBtn');
-  if (btn) {
-    btn.textContent = 'Barajar Preguntas: ' + (shuffleAnswers ? 'ON' : 'OFF');
+    if (btn) {
+    btn.textContent = 'Barajar Respuestas: ' + (shuffleAnswers ? 'ON' : 'OFF');
     btn.setAttribute('aria-pressed', String(shuffleAnswers));
   }
   answerOrders = new Array(answerOrders.length).fill(null);
